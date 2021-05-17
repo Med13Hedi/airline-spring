@@ -1,6 +1,5 @@
 package com.airline.airline.controller;
 
-import com.airline.airline.exception.UserNotFoundException;
 import com.airline.airline.model.Customer;
 import com.airline.airline.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;

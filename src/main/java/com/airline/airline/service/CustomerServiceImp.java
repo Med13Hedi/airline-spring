@@ -1,6 +1,6 @@
 package com.airline.airline.service;
 
-import com.airline.airline.exception.UserNotFoundException;
+import com.airline.airline.exception.notFoundException;
 import com.airline.airline.model.Customer;
 import com.airline.airline.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class CustomerServiceImp implements CustomerService{
     @Override
     public Customer findCustomerById(Long id) {
         return customerRepository.findCustomerById(id)
-                .orElseThrow(() -> new UserNotFoundException("User by id" + id + "was NOT FOUND"));
+                .orElseThrow(() -> new notFoundException("User by id" + id + "was NOT FOUND"));
     }
 
     @Override

@@ -1,6 +1,8 @@
 package com.airline.airline.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerator;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -9,6 +11,7 @@ import java.time.LocalDate;
 //Serializable to transform the class into different types of Strings
 
 @Entity
+//@JsonIdentityInfo(generator = ObjectIdGenerator.PropertyGenerator.class, property = "id")
 public class Customer implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
